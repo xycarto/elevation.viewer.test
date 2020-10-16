@@ -1,0 +1,179 @@
+html, body {
+  height:100%;
+  padding:0;
+  margin:0;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+hr {
+    width: 80%;
+}
+
+#container {
+  height: 100%;
+}
+
+#map {
+  position: relative;
+  height: 100%;
+  width: 66%;
+  left: 0;
+}
+
+#side-panel {
+  position: absolute;
+  height: 100%;
+  width: 34%;
+  background-color: #ffffff;
+  right: 0;
+  top: 0;
+}
+
+/*legend stuff*/
+
+#legendcontainer {
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  margin: auto;
+  left: 0;
+  right: 0;
+//  background-color: red;
+}
+
+	/*block container*/
+#lgblock1 {
+  height: 40px;
+  width: 100px;
+  top: 0;
+//  background-color: #bd0026;
+  overflow: hidden;
+} 
+
+#lgblock2 {
+  height: 40px;
+  width: 100px;
+  top: -40px;
+//  background-color: #00ffff;
+}
+
+#lgblock3 {
+  height: 40px;
+  width: 100px;
+  top: -80px;
+//  background-color: #ffff00;
+} 
+
+#lgblock4 {
+  height: 40px;
+  width: 100px;
+  top: -120px;
+//  background-color: #00ffff;
+} 
+
+#lgblock5 {
+  height: 40px;
+  width: 100px;
+  top: -160px;
+//  background-color: #ffff00;
+}
+
+	/*block 1*/
+
+#lgcolor1 {
+
+  background-color: #bd0026;
+  width: 30px;
+  height: 40px;
+  float: left;
+}
+
+#lgtext1 {
+  line-height: 40px;
+  width: 70px;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: middle; 
+}
+
+	/*block 2*/
+
+#lgcolor2 {
+  background-color: #f03b20;
+  width: 30px;
+  height: 40px;
+  float: left;
+}
+
+#lgtext2 {
+  line-height: 40px;
+  width: 70px;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: middle;
+}
+
+	/*block 3*/
+
+#lgcolor3 {
+
+  background-color: #fd8d3c;
+  width: 30px;
+  height: 40px;
+  float: left;
+}
+
+#lgtext3 {
+  line-height: 40px;
+  width: 70px;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: middle;
+}
+
+	/*block 4*/
+
+#lgcolor4 {
+
+  background-color: #fecc5c;
+  width: 30px;
+  height: 40px;
+  float: left;
+}
+
+#lgtext4 {
+  line-height: 40px;
+  width: 70px;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: middle;
+}
+
+	/*block 5*/
+
+#lgcolor5 {
+
+  background-color: #ffffb2;
+  width: 30px;
+  height: 40px;
+  float: left;
+}
+
+#lgtext5 {
+  line-height: 40px;
+  width: 70px;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: middle;
+}
+
+
+/*legend stuff end*/
+
+.margin {
+  margin: 10px;
+}
+
+.centertext {
+  text-align: center;
+}

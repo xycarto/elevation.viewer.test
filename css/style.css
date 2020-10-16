@@ -1,0 +1,304 @@
+html,
+body {
+  font: 11pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+.main {
+  margin: 0;
+  padding: 0; }
+
+#map {
+  height: 100%; }
+
+p {
+  color: #777777;
+  margin-top: 0; }
+
+h1 {
+  color: white;
+  font-size: 20pt;
+  margin: 0;
+  text-align: center; }
+
+h2 {
+  color: #333333;
+  font-size: 14pt;
+  margin-bottom: 7px;
+  margin-top: 10px; }
+
+h3 {
+  color: #5D8462;
+  font-size: 11pt;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+h4 {
+  color: #5D8462;
+  font-size: 9pt;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+hr {
+  border: 1px solid #cccccc;
+  border-top-width: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%; }
+
+ul {
+  color: #777777;
+  margin: 0; }
+
+ul.dashed {
+  list-style-type: none; }
+
+table {
+  width: 100%; }
+
+th {
+  text-align: left;
+  width: 40%;
+  color: #777777; }
+
+td {
+  text-align: left;
+  width: 40%; }
+
+.copyright {
+  color: #0366d6;
+  text-align: center; }
+
+.bold {
+  font-weight: bold; }
+
+img.center {
+  display: block;
+  margin: 0 auto; }
+
+img.banner {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.menu {
+  color: #000000;
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  cursor: pointer;
+  z-index: 2001; }
+
+.hidden {
+  display: none; }
+
+.legend-item {
+  width: 32px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 6px;
+  line-height: normal; }
+
+.dot-legend {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle; }
+
+.title-ribbon {
+  background-color: #777777;
+  color: #fff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.sidebar-content {
+  margin: 15px;
+  padding: 5px;
+  padding-bottom: 60px; }
+
+.logo {
+  float: bottom;
+  width: 100%;
+  margin-top: 25px; }
+
+.logo img {
+  width: 220px; }
+
+.copyright {
+  text-decoration: none; }
+
+.copyright p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #777777;
+  text-align: center; }
+
+.spacer {
+  height: 20px; }
+
+@media (max-width: 599px) {
+  #feature-popup {
+    height: 50%;
+    bottom: 0;
+    position: absolute; }
+  #feature-popup .title-ribbon {
+    display: none; }
+  #feature-popup img.banner {
+    display: none; } }
+
+.footer
+   {
+   position:static;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+ 
+   }
+
+/*legend stuff*/
+
+.lgblocktext {
+  color: #777777;
+}
+
+#legendcontainer {
+  position: static;
+  padding-bottom: 20px;
+  height: 200px;
+  width: 100px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+	/*block container*/
+#lgblock1 {
+  color: #777777;
+  height: 40px;
+  width: 100px;
+  top: 0;
+  overflow: hidden;
+} 
+
+#lgblock2 {
+  height: 40px;
+  width: 100px;
+  top: -40px;
+}
+
+#lgblock3 {
+  height: 40px;
+  width: 100px;
+  top: -80px;
+} 
+
+#lgblock4 {
+  height: 40px;
+  width: 100px;
+  top: -120px;
+} 
+
+#lgblock5 {
+  height: 40px;
+  width: 100px;
+  top: -160px;
+}
+
+	/*block 1*/
+
+#lgcolor1 {
+
+  background-color: #bd0026;
+  width: 30px;
+  height: 40px;
+  float: left;
+}
+
+#lgtext1 {
+  line-height: 40px;
+  width: 70px;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: middle; 
+}
+
+	/*block 2*/
+
+#lgcolor2 {
+  background-color: #f03b20;
+  width: 30px;
+  height: 40px;
+  float: left;
+}
+
+#lgtext2 {
+  line-height: 40px;
+  width: 70px;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: middle;
+}
+
+	/*block 3*/
+
+#lgcolor3 {
+
+  background-color: #fd8d3c;
+  width: 30px;
+  height: 40px;
+  float: left;
+}
+
+#lgtext3 {
+  line-height: 40px;
+  width: 70px;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: middle;
+}
+
+	/*block 4*/
+
+#lgcolor4 {
+
+  background-color: #fecc5c;
+  width: 30px;
+  height: 40px;
+  float: left;
+}
+
+#lgtext4 {
+  line-height: 40px;
+  width: 70px;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: middle;
+}
+
+	/*block 5*/
+
+#lgcolor5 {
+
+  background-color: #ffffb2;
+  width: 30px;
+  height: 40px;
+  float: left;
+}
+
+#lgtext5 {
+  line-height: 40px;
+  width: 70px;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: middle;
+}
+
+
+/*legend stuff end*/
+
+

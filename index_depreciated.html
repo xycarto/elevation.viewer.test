@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="LINZ Tile Services - Leaflet NZTM Demo" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <script src="js/leaflet.js"></script>
+    <script src="js/proj4.js"></script>
+    <script src="js/proj4leaflet.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="container">    
+        <div id="map">
+            <script src="js/map.js"></script>
+        </div>
+        <div id="side-panel">
+	    <div class="margin">
+		<h1 class="centertext">Wellington LiDAR</h1>
+	    </div>
+	    <hr>
+            <div  class="margin">
+		<h2>Base Map Selection</h2>
+		<div>
+		<p></p>
+		</div>
+		<div class="margin">
+		<button onclick="addmaps(elevMap)">Aerial with Elevation</button>
+		<p> Aerial and Digital Elevation Model: Aerial Imagery blended with hillshade to help accentuate land features.</p>
+		</div>
+		<div class="margin">
+		<button onclick="addmaps(demMap)">DEM</button>
+		<p>Digital Elevation Model:  This map represents the base elevation derived from LiDAR points.  Tree tops, houses and other objects on the land are removed using an interpolation method, revealing an idea of land elevation.</p>
+		</div>
+		<div class="margin">
+		<button onclick="addmaps(dsmMap)">DSM</button>
+		<p>Digital Surface Model:  This map represents the elevation of all things on the surface derived from LiDAR points.  In this map, one can make out where tree tops, house and other surface objects might be.</p>
+		</div>            
+            </div>
+	    <hr>
+	    <div id=overlay-section class="margin">
+		<h2>Overlay Selection</h2>
+		<button onclick="togglell()">Lowlands</button>
+		<p>Represents those regions of elevation from 0-20m</p>
+		<!--LEGEND-->
+		<p>Elevation</p>
+		<div id="legendcontainer">
+		    <div id="lgblock1">
+			<div id=lgcolor1></div>
+			<div id=lgtext1>0m</div>
+		    </div>
+		    <div id="lgblock2">
+			<div id=lgcolor2></div>
+			<div id=lgtext2>2m</div>
+		    </div>
+		    <div id="lgblock3">
+			<div id=lgcolor3></div>
+			<div id=lgtext3>4m</div>
+		    </div>
+		    <div id="lgblock4">
+			<div id=lgcolor4></div>
+			<div id=lgtext4>8m</div>
+		    </div>
+		    <div id="lgblock5">
+			<div id=lgcolor5></div>
+			<div id=lgtext5>20m</div>
+		    </div>
+		</div>
+	    </div>
+        </div>
+    </div>   
+  </body>
+</html>
+
