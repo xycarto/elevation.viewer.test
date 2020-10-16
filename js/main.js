@@ -1,28 +1,4 @@
-var baseQueryUrl = "//data.linz.govt.nz/services/query/v1/set.json?key=a6bfb5010c0346e5a6e57a9b97be2d9d&set=7224&radius=10&max_results=5&geometry=true&with_field_names=true&"
-var queryLayers = [];
-var mapClicked = false;
 
-featureInfoConfig = {
-    "53358": {
-        "display_name": "Aerial and Elevation",
-        "properties": {
-            "administered_under": "Administered Under",
-            "purpose": "Purpose",
-        }
-    },
-    "51572": {
-        "display_name": "DEM",
-        "properties": {
-            "lease_name": "Name",
-        }
-    },
-    "53564": {
-        "display_name": "DSM",
-        "properties": {
-            "name": "Name"
-        }
-    }
-};
 
 var settings = {
     maxZoom: 12,
