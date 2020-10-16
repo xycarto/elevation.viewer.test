@@ -9,19 +9,36 @@ var crs = new L.Proj.CRS(
     }
   );
   
-  
-  var dem_urlTemplate = 'http://maps.linz.io/tiles/wellyvation-dem-basemap/NZTM/{z}/{x}/{y}.png'
+  //overlays
+  //var dem_urlTemplate = 'http://maps.linz.io/tiles/wellyvation-dem-basemap/NZTM/{z}/{x}/{y}.png'
+
+  var dem_urlTemplate = 'http://localhost:8000/wellyDEM/{z}/{x}/{y}.png'
   
   var dsm_urlTemplate = 'http://maps.linz.io/tiles/wellyvation-dsm-basemap/NZTM/{z}/{x}/{y}.png'
-  
+ 
   var lowland_urlTemplate = 'https://maps.linz.io/tiles/wellyvation-lowlands-basemap/NZTM/{z}/{x}/{y}.png'
   
-  var aerialElev_urlTemplate = 'http://maps.linz.io/tiles/wellyvation-basemap/NZTM/{z}/{x}/{y}.png'
+  //var aerialElev_urlTemplate = 'http://maps.linz.io/tiles/wellyvation-basemap/NZTM/{z}/{x}/{y}.png'
+
+  //basemaps
+  var linzAerial_urlTemplate = 'https://basemaps.linz.govt.nz/v1/tiles/aerial/EPSG:2193/{z}/{x}/{y}.webp?api=c01emr2n17q0qtdaens2m3abcwd'
+
+  var linzColour_urlTemplate = 'https://tiles.maps.linz.io/nz_colour_basemap/NZTM/{z}/{x}/{y}.png'
+
+  var linzTopo_urlTemplate = 'https://tiles.maps.linz.io/nz_topo_basemap/NZTM/{z}/{x}/{y}.png'
+
   
-  
+  var settingsOverlay = {
+    tms: true,
+    maxZoom: 12,
+    tileSize: 512,
+    continuousWorld: true,
+    attribution: '<a href="http://www.linz.govt.nz">Sourced from LINZ. CC-BY 4.0</a>', //Simple attribution for linz
+};
+
   var settings = {
       tms: true,
-      maxZoom: 14,
+      maxZoom: 12,
       continuousWorld: true,
       attribution: '<a href="http://www.linz.govt.nz">Sourced from LINZ. CC-BY 4.0</a>', //Simple attribution for linz
   };
@@ -35,24 +52,36 @@ var crs = new L.Proj.CRS(
   });
   
   
-  var demMap = new L.TileLayer(dem_urlTemplate, settings);
+  var demMap = new L.TileLayer(dem_urlTemplate, settingsOverlay);
   
-  var dsmMap = new L.TileLayer(dsm_urlTemplate, settings);
+  var dsmMap = new L.TileLayer(dsm_urlTemplate, settingsOverlay);
   
-  var aerialElev = new L.TileLayer(aerialElev_urlTemplate, settings);
+  //var aerialElev = new L.TileLayer(aerialElev_urlTemplate, settings);
   
   var lowlandMap = new L.TileLayer(lowland_urlTemplate, settings);
+
+  var linzAerial = new L.TileLayer(linzAerial_urlTemplate, settings);
+
+  var linzColour = new L.TileLayer(linzColour_urlTemplate, settings);
+
+  var linzTopo = new L.TileLayer(linzTopo_urlTemplate, settings);
   
   var basemaps = {
-      AerialDSM: aerialElev, 
-      DEM: demMap, 
-      DSM: dsmMap};
+      LINZColourBase: linzColour,
+      LINZAerial: linzAerial,
+      LINZTopo: linzTopo
+      //DEM: demMap, 
+      //DSM: dsmMap
+      };
 
-  var overlays = {Lowlands: lowlandMap};
+  var overlays = {
+      DEM: demMap,
+      DSM: dsmMap,
+      Lowlands: lowlandMap};
   
   //var baseMaps = {"AerialElev": aerialElev};
   
-  function addmaps(basemaps) {
+  /*function addmaps(basemaps) {
           map.removeLayer(basemaps);
           map.addLayer(basemaps);
   };
@@ -66,6 +95,7 @@ var crs = new L.Proj.CRS(
       }
       toggle = !toggle
   };
+  */
   
   /*var overlayMaps = {
       "</span><span>Aerial and Elevation</span>": aerialElev,
@@ -79,9 +109,9 @@ var crs = new L.Proj.CRS(
   
   var layers = L.control.layers(basemaps, overlays).addTo(map)
   
-  map.addLayer(aerialElev);
+  map.addLayer(linzAerial);
   
-  map.setView([-41.29, 175.4], 7);
+  map.setView([-41.29, 174.0], 3);
   
   //map.addControl(new L.Control.Permalink({ text: 'Permalink', layers: layers }));
   
