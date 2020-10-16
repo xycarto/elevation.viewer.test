@@ -12,7 +12,7 @@ var crs = new L.Proj.CRS(
   //overlays
   //var dem_urlTemplate = 'http://maps.linz.io/tiles/wellyvation-dem-basemap/NZTM/{z}/{x}/{y}.png'
 
-  var dem_urlTemplate = 'http://localhost:8000/wellyDEM/{z}/{x}/{y}.png'
+  var dem_urlTemplate = 'https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDEM-lidar/tile-cache/2020101712/wellyDEM-lidar/{z}/{x}/{y}.png'
   
   var dsm_urlTemplate = 'http://localhost:8000/wellyDSM/{z}/{x}/{y}.png'
  
