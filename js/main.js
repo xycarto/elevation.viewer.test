@@ -43,11 +43,14 @@ var crs = new L.Proj.CRS(
   
   var lowlandMap = new L.TileLayer(lowland_urlTemplate, settings);
   
-  var basemaps = [aerialElev, demMap, dsmMap];
+  var basemaps = {
+      AerialDSM: aerialElev, 
+      DEM: demMap, 
+      DSM: dsmMap};
+
+  var overlays = {Lowlands: lowlandMap};
   
-  var baseMaps = {
-      "AerialElev": aerialElev
-  };
+  //var baseMaps = {"AerialElev": aerialElev};
   
   function addmaps(basemaps) {
           map.removeLayer(basemaps);
@@ -64,24 +67,23 @@ var crs = new L.Proj.CRS(
       toggle = !toggle
   };
   
-  var overlayMaps = {
+  /*var overlayMaps = {
       "</span><span>Aerial and Elevation</span>": aerialElev,
       "</span><span>Digital ELEVATION Model</span>": demMap,
       "</span><span>Digital SURFACE Model</span><hr>": dsmMap,
       "<span>Lowlands</span>": lowlandMap
-  }
+  }*/
   
   
   var zoomcontrol = new L.Control.Zoom({ position: 'bottomright' }).addTo(map)
   
-  var layers = L.control.layers(baseMaps, overlayMaps, { "hideSingleBase": true }).addTo(map)
+  var layers = L.control.layers(basemaps, overlays).addTo(map)
   
-  //L.control.layers(baseMaps, overlayMaps).addTo(map);
   map.addLayer(aerialElev);
   
   map.setView([-41.29, 175.4], 7);
   
-  map.addControl(new L.Control.Permalink({ text: 'Permalink', layers: layers }));
+  //map.addControl(new L.Control.Permalink({ text: 'Permalink', layers: layers }));
   
 
 
