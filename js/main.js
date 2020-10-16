@@ -33,10 +33,10 @@ var settings = {
     zIndex: 2
 };
 
-var aerialelev = L.tileLayer('http://localhost:8080/wmts/1.0.0/wellyvation_basemap/NZTM/{z}/{x}/{y}.png', settings),
-    dem = L.tileLayer('http://localhost:8081/wmts/1.0.0/wellyvation_dem_basemap/NZTM/{z}/{x}/{y}.png', settings),
-    dsm = L.tileLayer('http://localhost:8082/wmts/1.0.0/wellyvation_dsm_basemap/NZTM/{z}/{x}/{y}.png', settings),
-    lowlands = L.tileLayer('http://localhost:8083/wmts/1.0.0/wellyvation_lowlands_basemap/NZTM/{z}/{x}/{y}.png', settings);
+var aerialelev = L.tileLayer('http://maps.linz.io/tiles/wellyvation-basemap/NZTM/{z}/{x}/{y}.png', settings),
+    dem = L.tileLayer('http://maps.linz.io/tiles/wellyvation-dem-basemap/NZTM/{z}/{x}/{y}.png', settings),
+    dsm = L.tileLayer('http://maps.linz.io/tiles/wellyvation-dsm-basemap/NZTM/{z}/{x}/{y}.png', settings),
+    lowlands = L.tileLayer('https://maps.linz.io/tiles/wellyvation-lowlands-basemap/NZTM/{z}/{x}/{y}.png', settings);
 
 var baseMaps = {
     "AerialElev": aerialelev
