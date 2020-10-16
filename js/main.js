@@ -14,7 +14,7 @@ var crs = new L.Proj.CRS(
 
   var dem_urlTemplate = 'http://localhost:8000/wellyDEM/{z}/{x}/{y}.png'
   
-  var dsm_urlTemplate = 'http://maps.linz.io/tiles/wellyvation-dsm-basemap/NZTM/{z}/{x}/{y}.png'
+  var dsm_urlTemplate = 'http://localhost:8000/wellyDSM/{z}/{x}/{y}.png'
  
   var lowland_urlTemplate = 'https://maps.linz.io/tiles/wellyvation-lowlands-basemap/NZTM/{z}/{x}/{y}.png'
   
@@ -25,8 +25,9 @@ var crs = new L.Proj.CRS(
 
   var linzColour_urlTemplate = 'https://tiles.maps.linz.io/nz_colour_basemap/NZTM/{z}/{x}/{y}.png'
 
-  var linzTopo_urlTemplate = 'https://tiles.maps.linz.io/nz_topo_basemap/NZTM/{z}/{x}/{y}.png'
+  //var linzTopo_urlTemplate = 'https://tiles.maps.linz.io/nz_topo_basemap/NZTM/{z}/{x}/{y}.png'
 
+  var linzTopo_urlTemplate = 'http://tiles-a.data-cdn.linz.govt.nz/services;key=1b85daaf8266427a9eb3f46a532cd2c7/tiles/v4/layer=50767/EPSG:2193/{z}/{x}/{y}.png'
   
   var settingsOverlay = {
     tms: true,
@@ -115,15 +116,6 @@ var crs = new L.Proj.CRS(
   
   //map.addControl(new L.Control.Permalink({ text: 'Permalink', layers: layers }));
   
-
-
-
-
-
-
-
-
-
 //setup sidebar
 var sidebar = L.control.sidebar('sidebar', {
     closeButton: true,
