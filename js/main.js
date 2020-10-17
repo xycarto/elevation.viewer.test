@@ -17,6 +17,8 @@ var crs = new L.Proj.CRS(
  
   var lowland_urlTemplate = 'https://maps.linz.io/tiles/wellyvation-lowlands-basemap/NZTM/{z}/{x}/{y}.png'
 
+  var slope_urlTemplate = 'https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDSM-lidar/tile-cache/2020101712/wellySLOPE-lidar/{z}/{x}/{y}.png'
+
   //basemaps
   var linzAerial_urlTemplate = 'https://basemaps.linz.govt.nz/v1/tiles/aerial/EPSG:2193/{z}/{x}/{y}.webp?api=c01emr2n17q0qtdaens2m3abcwd'
 
@@ -48,12 +50,16 @@ var crs = new L.Proj.CRS(
   });
   
   
+  //overlays
   var demMap = new L.TileLayer(dem_urlTemplate, settingsOverlay);
   
   var dsmMap = new L.TileLayer(dsm_urlTemplate, settingsOverlay);
+
+  var slopeMap = new L.TileLayer(slope_urlTemplate, settingsOverlay);
   
   var lowlandMap = new L.TileLayer(lowland_urlTemplate, settings);
 
+  //basemaps
   var linzAerial = new L.TileLayer(linzAerial_urlTemplate, settings);
 
   var linzColour = new L.TileLayer(linzColour_urlTemplate, settings);
@@ -69,6 +75,7 @@ var crs = new L.Proj.CRS(
   var overlays = {
       DEM: demMap,
       DSM: dsmMap,
+      Slope: slopeMap,
       Lowlands: lowlandMap};
   
   //var baseMaps = {"AerialElev": aerialElev};
