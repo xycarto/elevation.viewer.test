@@ -50,6 +50,31 @@ var crs = new L.Proj.CRS(
       worldCopyJump: false,
           zoomControl: false,
   });
+
+
+//vectorTiles TODO
+/*
+var vectorURL = "http://localhost:8000/wellyDEM_10mContour/{z}/{x}/{y}.pbf";
+
+var vectorSettings = {
+    maxZoom: 12
+  };
+
+var styles = {
+    interactive: true
+    vectorTileLayerStyles: {
+        wellyDEM_10mContour: {
+            weight: 2,
+            color: "#e4a5e4",
+            //fillOpacity: 0.75,
+            //fill: true
+    }}
+  };
+
+var vector = L.vectorGrid.protobuf(vectorURL, styles);
+*/
+//
+
   
   
   //overlays
@@ -78,6 +103,7 @@ var crs = new L.Proj.CRS(
       DEM_HS: demMap,
       DSM_HS: dsmMap,
       Slope: slopeMap,
+      //Contour: vector,
       Lowlands: lowlandMap};
   
   var zoomcontrol = new L.Control.Zoom({ position: 'bottomright' }).addTo(map)
