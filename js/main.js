@@ -53,15 +53,15 @@ var crs = new L.Proj.CRS(
 
 
 //vectorTiles TODO
-/*
-var vectorURL = "http://localhost:8000/wellyDEM_10mContour/{z}/{x}/{y}.pbf";
+
+var vectorURL = "http://localhost:8000/wellyDEM_10mContour_nztm/{z}/{x}/{y}.pbf";
 
 var vectorSettings = {
     maxZoom: 12
   };
 
 var styles = {
-    interactive: true
+    interactive: true,
     vectorTileLayerStyles: {
         wellyDEM_10mContour: {
             weight: 2,
@@ -72,7 +72,7 @@ var styles = {
   };
 
 var vector = L.vectorGrid.protobuf(vectorURL, styles);
-*/
+
 //
 
   
