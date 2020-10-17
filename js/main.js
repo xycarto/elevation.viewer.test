@@ -10,15 +10,12 @@ var crs = new L.Proj.CRS(
   );
   
   //overlays
-  //var dem_urlTemplate = 'http://maps.linz.io/tiles/wellyvation-dem-basemap/NZTM/{z}/{x}/{y}.png'
 
   var dem_urlTemplate = 'https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDEM-lidar/tile-cache/2020101712/wellyDEM-lidar/{z}/{x}/{y}.png'
   
   var dsm_urlTemplate = 'https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDSM-lidar/tile-cache/2020101712/wellyDSM-lidar/{z}/{x}/{y}.png'
  
   var lowland_urlTemplate = 'https://maps.linz.io/tiles/wellyvation-lowlands-basemap/NZTM/{z}/{x}/{y}.png'
-  
-  //var aerialElev_urlTemplate = 'http://maps.linz.io/tiles/wellyvation-basemap/NZTM/{z}/{x}/{y}.png'
 
   //basemaps
   var linzAerial_urlTemplate = 'https://basemaps.linz.govt.nz/v1/tiles/aerial/EPSG:2193/{z}/{x}/{y}.webp?api=c01emr2n17q0qtdaens2m3abcwd'
