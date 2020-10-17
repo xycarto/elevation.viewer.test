@@ -22,7 +22,7 @@ var crs = new L.Proj.CRS(
   //var slope_urlTemplate = 'http://localhost:8000/wellySLOPE-lidar/{z}/{x}/{y}.png'
 
   //basemaps
-  var linzAerial_urlTemplate = 'https://basemaps.linz.govt.nz/v1/tiles/aerial/EPSG:2193/{z}/{x}/{y}.webp?api=c01emr2n17q0qtdaens2m3abcwd'
+  var linzAerial_urlTemplate = 'https://basemaps.linz.govt.nz/v1/tiles/aerial/EPSG:2193/{z}/{x}/{y}.png?api=c01emr2n17q0qtdaens2m3abcwd'
 
   var linzColour_urlTemplate = 'https://tiles.maps.linz.io/nz_colour_basemap/NZTM/{z}/{x}/{y}.png'
 
