@@ -80,32 +80,6 @@ var crs = new L.Proj.CRS(
       Slope: slopeMap,
       Lowlands: lowlandMap};
   
-  //var baseMaps = {"AerialElev": aerialElev};
-  
-  /*function addmaps(basemaps) {
-          map.removeLayer(basemaps);
-          map.addLayer(basemaps);
-  };
-  
-  window.toggle = false;
-  function togglell() {
-      if(!toggle) {
-          map.addLayer(lowlandMap);
-      } else {
-          map.removeLayer(lowlandMap);
-      }
-      toggle = !toggle
-  };
-  */
-  
-  /*var overlayMaps = {
-      "</span><span>Aerial and Elevation</span>": aerialElev,
-      "</span><span>Digital ELEVATION Model</span>": demMap,
-      "</span><span>Digital SURFACE Model</span><hr>": dsmMap,
-      "<span>Lowlands</span>": lowlandMap
-  }*/
-  
-  
   var zoomcontrol = new L.Control.Zoom({ position: 'bottomright' }).addTo(map)
   
   var layers = L.control.layers(basemaps, overlays).addTo(map)
