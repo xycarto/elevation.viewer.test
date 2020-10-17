@@ -103,7 +103,7 @@ var vector = L.vectorGrid.protobuf(vectorURL, styles);
       DEM_HS: demMap,
       DSM_HS: dsmMap,
       Slope: slopeMap,
-      //Contour: vector,
+      Contour: vector,
       Lowlands: lowlandMap};
   
   var zoomcontrol = new L.Control.Zoom({ position: 'bottomright' }).addTo(map)
