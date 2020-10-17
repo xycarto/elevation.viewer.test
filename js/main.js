@@ -17,7 +17,7 @@ var crs = new L.Proj.CRS(
  
   var lowland_urlTemplate = 'https://maps.linz.io/tiles/wellyvation-lowlands-basemap/NZTM/{z}/{x}/{y}.png'
 
-  var slope_urlTemplate = 'https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDSM-lidar/tile-cache/2020101712/wellySLOPE-lidar/{z}/{x}/{y}.png'
+  var slope_urlTemplate = 'https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellySLOPE-lidar/tile-cache/2020101712/wellySLOPE-lidar/{z}/{x}/{y}.png'
 
   //var slope_urlTemplate = 'http://localhost:8000/wellySLOPE-lidar/{z}/{x}/{y}.png'
 
