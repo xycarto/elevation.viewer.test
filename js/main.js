@@ -75,8 +75,8 @@ var crs = new L.Proj.CRS(
       };
 
   var overlays = {
-      DEM: demMap,
-      DSM: dsmMap,
+      DEM_HS: demMap,
+      DSM_HS: dsmMap,
       Slope: slopeMap,
       Lowlands: lowlandMap};
   
