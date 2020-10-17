@@ -63,9 +63,9 @@ var vectorSettings = {
 var styles = {
     interactive: true,
     vectorTileLayerStyles: {
-        wellyDEM_10mContour: {
-            weight: 2,
-            color: "#e4a5e4",
+        wellyDEM_contour: {
+            weight: 0.1,
+            color: "#fefefe",
             //fillOpacity: 0.75,
             //fill: true
     }}
