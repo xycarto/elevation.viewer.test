@@ -110,7 +110,7 @@ var crs = new L.Proj.CRS(
   
   var layers = L.control.layers(basemaps, overlays).addTo(map)
   
-  map.addLayer(linzAerial);
+  map.addLayer(linzColour);
   
   map.setView([-41.29, 174.0], 3);
   
