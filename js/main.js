@@ -22,8 +22,6 @@ var crs = new L.Proj.CRS(
 
   var linzColour_urlTemplate = 'https://tiles.maps.linz.io/nz_colour_basemap/NZTM/{z}/{x}/{y}.png'
 
-  //var linzTopo_urlTemplate = 'https://tiles.maps.linz.io/nz_topo_basemap/NZTM/{z}/{x}/{y}.png'
-
   var linzTopo_urlTemplate = 'http://tiles-a.data-cdn.linz.govt.nz/services;key=1b85daaf8266427a9eb3f46a532cd2c7/tiles/v4/layer=50767/EPSG:2193/{z}/{x}/{y}.png'
   
   var settingsOverlay = {
@@ -54,8 +52,6 @@ var crs = new L.Proj.CRS(
   
   var dsmMap = new L.TileLayer(dsm_urlTemplate, settingsOverlay);
   
-  //var aerialElev = new L.TileLayer(aerialElev_urlTemplate, settings);
-  
   var lowlandMap = new L.TileLayer(lowland_urlTemplate, settings);
 
   var linzAerial = new L.TileLayer(linzAerial_urlTemplate, settings);
@@ -68,8 +64,6 @@ var crs = new L.Proj.CRS(
       LINZColourBase: linzColour,
       LINZAerial: linzAerial,
       LINZTopo: linzTopo
-      //DEM: demMap, 
-      //DSM: dsmMap
       };
 
   var overlays = {
