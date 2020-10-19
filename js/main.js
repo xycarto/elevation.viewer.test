@@ -122,7 +122,7 @@ var zoomcontrol = new L.Control.Zoom({ position: 'bottomright' }).addTo(map)
   
 var layers = L.control.layers(basemaps, overlays, settingsControl).addTo(map)
   
-map.addLayer(linzAerial);
+map.addLayer(linzColour);
   
 map.setView([-41.29, 174.0], 3);
   
