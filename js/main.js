@@ -113,10 +113,14 @@ var vector = L.vectorGrid.protobuf(vectorURL, styles);
       Slope: slopeMap,
       //Contour: vector,
       "Lowlands(>z6) Overlay": lowlandMap};
+
+var settingsControl = {
+    collapsed: true
+};
   
   var zoomcontrol = new L.Control.Zoom({ position: 'bottomright' }).addTo(map)
   
-  var layers = L.control.layers(basemaps, overlays).addTo(map)
+  var layers = L.control.layers(basemaps, overlays, settingsControl).addTo(map)
   
   map.addLayer(linzAerial);
   
