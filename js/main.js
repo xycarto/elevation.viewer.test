@@ -43,6 +43,14 @@ var crs = new L.Proj.CRS(
       attribution: '<a href="http://www.linz.govt.nz">Sourced from LINZ. CC-BY 4.0</a>', //Simple attribution for linz
   };
   
+  var settingsLL = {
+    tms: true,
+    minZoom: 6,
+    maxZoom: 12,
+    continuousWorld: true,
+    attribution: '<a href="http://www.linz.govt.nz">Sourced from LINZ. CC-BY 4.0</a>', //Simple attribution for linz
+};
+
   
   var map = new L.Map('map', {
       crs: crs,
@@ -84,7 +92,7 @@ var vector = L.vectorGrid.protobuf(vectorURL, styles);
 
   var slopeMap = new L.TileLayer(slope_urlTemplate, settingsOverlay);
   
-  var lowlandMap = new L.TileLayer(lowland_urlTemplate, settings);
+  var lowlandMap = new L.TileLayer(lowland_urlTemplate, settingsLL);
 
   //basemaps
   var linzAerial = new L.TileLayer(linzAerial_urlTemplate, settings);
@@ -94,17 +102,17 @@ var vector = L.vectorGrid.protobuf(vectorURL, styles);
   var linzTopo = new L.TileLayer(linzTopo_urlTemplate, settings);
   
   var basemaps = {
-      LINZColourBase: linzColour,
-      LINZAerial: linzAerial,
-      LINZTopo: linzTopo
+      "LINZ Colour Base Map": linzColour,
+      "LINZ Aerial Base Map": linzAerial,
+      "LINZ Topo50 Base Map": linzTopo
       };
 
   var overlays = {
-      DEM_HS: demMap,
-      DSM_HS: dsmMap,
+      "DEM Hillshade Overlay": demMap,
+      "DSM Hillshade Overlay": dsmMap,
       Slope: slopeMap,
-      Contour: vector,
-      Lowlands: lowlandMap};
+      //Contour: vector,
+      "Lowlands(>z6) Overlay": lowlandMap};
   
   var zoomcontrol = new L.Control.Zoom({ position: 'bottomright' }).addTo(map)
   
