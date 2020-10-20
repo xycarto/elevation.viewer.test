@@ -83,7 +83,7 @@ var styles = {
             return {
                 weight: weight,
                 color: "#ff5633",
-                opacity: 0.5
+                opacity: 0.75
                 //fillOpacity: 0.75,
                 //fill: true
     }}
