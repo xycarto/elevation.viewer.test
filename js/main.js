@@ -76,14 +76,19 @@ var styles = {
     minZoom: 8,
     tileSize: 4096,
     vectorTileLayerStyles: {
-        wellycontour_simple: {
-            weight: 1.0,
-            color: "#fefefe",
-            opacity: 0.5
-            //fillOpacity: 0.75,
-            //fill: true
+        wellycontour_simple: function(properties,zoom) {
+            var level = map.getZoom();
+            var weight = 1.0;
+            if (level >= 10) {weight = 2.0;}
+            return {
+                weight: weight,
+                color: "#ff5633",
+                opacity: 0.5
+                //fillOpacity: 0.75,
+                //fill: true
     }}
-  };
+  }
+};
 
 var vector = L.vectorGrid.protobuf(vectorURL, styles);
 
