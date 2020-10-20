@@ -62,9 +62,9 @@ var map = new L.Map('map', {
 
 //vectorTiles TODO
 
-//var vectorURL = "https://xycarto.github.io/elevation.viewer.test/wellycontour_simple/{z}/{x}/{y}.pbf";
+var vectorURL = "https://xycarto.github.io/elevation.viewer.test/wellycontour_simple/{z}/{x}/{y}.pbf";
 
-var vectorURL = "http://localhost:8000/wellycontour_simple/{z}/{x}/{y}.pbf";
+//var vectorURL = "http://localhost:8000/wellycontour_simple/{z}/{x}/{y}.pbf";
 
 var vectorSettings = {
     maxZoom: 12,
