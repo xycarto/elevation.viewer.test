@@ -64,12 +64,16 @@ var map = new L.Map('map', {
 
 var vectorURL = "https://xycarto.github.io/elevation.viewer.test/wellycontour_simple/{z}/{x}/{y}.pbf";
 
+//var vectorURL = "http://localhost:8000/wellycontour_simple/{z}/{x}/{y}.pbf";
+
 var vectorSettings = {
-    maxZoom: 12
+    maxZoom: 12,
+    minZoom: 8
   };
 
 var styles = {
     interactive: true,
+    minZoom: 8,
     vectorTileLayerStyles: {
         wellycontour_simple: {
             weight: 1.0,
@@ -112,7 +116,7 @@ var overlays = {
       "DEM Hillshade Overlay": demMap,
       "DSM Hillshade Overlay": dsmMap,
       Slope: slopeMap,
-      "Contour 50m": vector,
+      "Contour 50m(>z8)": vector,
       "Lowlands(>z6) Overlay": lowlandMap};
 
 var settingsControl = {
