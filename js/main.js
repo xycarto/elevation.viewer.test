@@ -62,7 +62,7 @@ var map = new L.Map('map', {
 
 //vectorTiles TODO
 
-var vectorURL = "http://localhost:8000/wellyDEM_10mContour_nztm/{z}/{x}/{y}.pbf";
+var vectorURL = "https://xycarto.github.io/elevation.viewer.test/wellycontour_simple/{z}/{x}/{y}.pbf";
 
 var vectorSettings = {
     maxZoom: 12
@@ -71,9 +71,10 @@ var vectorSettings = {
 var styles = {
     interactive: true,
     vectorTileLayerStyles: {
-        wellyDEM_contour: {
-            weight: 0.1,
+        wellycontour_simple: {
+            weight: 1.0,
             color: "#fefefe",
+            opacity: 0.5
             //fillOpacity: 0.75,
             //fill: true
     }}
@@ -111,7 +112,7 @@ var overlays = {
       "DEM Hillshade Overlay": demMap,
       "DSM Hillshade Overlay": dsmMap,
       Slope: slopeMap,
-      //Contour: vector,
+      "Contour 50m": vector,
       "Lowlands(>z6) Overlay": lowlandMap};
 
 var settingsControl = {
