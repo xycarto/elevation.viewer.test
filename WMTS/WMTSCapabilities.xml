@@ -160,5 +160,5 @@ template="https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDEM-lid
 <MatrixHeight>19289</MatrixHeight>
 </TileMatrix>
   </Contents>
-  <ServiceMetadataURL xlink:href="https://xycarto.github.io/elevation.viewer.test/wellycontour_simple/WMTS/WMTSCapabilities.xml"/>
+  <ServiceMetadataURL xlink:href="https://xycarto.github.io/elevation.viewer.test/WMTS/WMTSCapabilities.xml"/>
 </Capabilities>
