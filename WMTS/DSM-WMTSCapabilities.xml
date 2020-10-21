@@ -6,7 +6,7 @@ xmlns:gml="http://www.opengis.net/gml" xsi:schemaLocation="http://www.opengis.ne
 http://schemas.opengis.net/wmts/1.0/wmtsGetCapabilities_response.xsd" version="1.0.0">
   <ows:ServiceIdentification>
     <ows:Title>Wellyvation Prototype</ows:Title>
-    <ows:Abstract>Mapping Service sample provided by XYCarto for demonstration of LiDAR DEM Hillshade model </ows:Abstract>
+    <ows:Abstract>Mapping Service sample provided by XYCarto for demonstration of LiDAR DSM Hillshade model </ows:Abstract>
     <ows:ServiceType>OGC WMTS</ows:ServiceType>
     <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
     <ows:Fees>There are no fees associated with data access via the web interface, API or
@@ -21,26 +21,26 @@ Web Services.</ows:Fees>
   </ows:ServiceProvider>
   <Contents>
     <Layer>
-      <ows:Title>Wellington Elevation 1m DEM HS Base Map</ows:Title>
+      <ows:Title>Wellington Elevation 1m DSM HS Base Map</ows:Title>
       <ows:Abstract></ows:Abstract>
      <ows:Abstract/>
 <ows:WGS84BoundingBox>
         <ows:LowerCorner>174.61923886194725242 -41.6288905906251685</ows:LowerCorner>
         <ows:UpperCorner>176.39760160546163092 -40.59006062986358643</ows:UpperCorner>
 </ows:WGS84BoundingBox>
-<ows:Identifier>wellyDEM-lidar</ows:Identifier>
+<ows:Identifier>wellyDSM-lidar</ows:Identifier>
 <Style>
 <ows:Identifier>default</ows:Identifier>
 </Style>
 <Format>image/png</Format>
 <TileMatrixSetLink>
-<TileMatrixSet>wellyDEM-lidar</TileMatrixSet>
+<TileMatrixSet>wellyDSM-lidar</TileMatrixSet>
 </TileMatrixSetLink>
 <ResourceURL format="image/png" resourceType="tile"
-template="https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDEM-lidar/tile-cache/2020101712/{TileMatrixSet}/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+template="https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDSM-lidar/tile-cache/2020101712/{TileMatrixSet}/{TileMatrix}/{TileCol}/{TileRow}.png"/>
 </Layer>
 <TileMatrixSet>
-      <ows:Identifier>wellyDEM-lidar</ows:Identifier>
+      <ows:Identifier>wellyDSM-lidar</ows:Identifier>
       <ows:SupportedCRS>EPSG:2193</ows:SupportedCRS>
       <TileMatrix>
         <ows:Identifier>0</ows:Identifier>
@@ -197,5 +197,5 @@ template="https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDEM-lid
       </TileMatrix>
     </TileMatrixSet>
   </Contents>
-  <ServiceMetadataURL xlink:href="https://xycarto.github.io/elevation.viewer.test/WMTS/DEM-WMTSCapabilities.xml"/>
+  <ServiceMetadataURL xlink:href="https://xycarto.github.io/elevation.viewer.test/WMTS/DSM-WMTSCapabilities.xml"/>
 </Capabilities>
