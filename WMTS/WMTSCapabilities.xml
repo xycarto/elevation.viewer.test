@@ -36,10 +36,10 @@ Web Services.</ows:Fees>
 <TileMatrixSetLink>
 <TileMatrixSet>wellyDEM-lidar</TileMatrixSet>
 </TileMatrixSetLink>
-      <ResourceURL format="image/png" resourceType="tile"
+<ResourceURL format="image/png" resourceType="tile"
 template="https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDEM-lidar/tile-cache/2020101712/{TileMatrixSet}/{TileMatrix}/{TileCol}/{TileRow}.png"/>
-    </Layer>
-    <TileMatrixSet>
+</Layer>
+<TileMatrixSet>
       <ows:Identifier>wellyDEM-lidar<</ows:Identifier>
       <ows:SupportedCRS>EPSG:2193</ows:SupportedCRS>
 <TileMatrix>
@@ -159,6 +159,7 @@ template="https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDEM-lid
 <MatrixWidth>12074</MatrixWidth>
 <MatrixHeight>19289</MatrixHeight>
 </TileMatrix>
+</TileMatrixSet>
   </Contents>
   <ServiceMetadataURL xlink:href="https://xycarto.github.io/elevation.viewer.test/WMTS/WMTSCapabilities.xml"/>
 </Capabilities>
