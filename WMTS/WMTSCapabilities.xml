@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<Capabilities xmlns="http://www.opengis.net/wmts/1.0"
+xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:gml="http://www.opengis.net/gml" xsi:schemaLocation="http://www.opengis.net/wmts/1.0
+http://schemas.opengis.net/wmts/1.0/wmtsGetCapabilities_response.xsd" version="1.0.0">
+  <ows:ServiceIdentification>
+    <ows:Title>Wellyvation Prototype</ows:Title>
+    <ows:Abstract>Mapping Service sample provided by XYCarto for demonstration of LiDAR DEM Hillshade model </ows:Abstract>
+    <ows:ServiceType>OGC WMTS</ows:ServiceType>
+    <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+    <ows:Fees>There are no fees associated with data access via the web interface, API or
+Web Services.</ows:Fees>
+    <ows:AccessConstraints>Base map used as a demonstration service for XYCarto</ows:AccessConstraints>
+  </ows:ServiceIdentification>
+  <ows:ServiceProvider>
+    <ows:ProviderName>XYCarto</ows:ProviderName>
+    <ows:ProviderSite xlink:href="https://xycarto.com/"/>
+    <ows:ServiceContact>
+    </ows:ServiceContact>
+  </ows:ServiceProvider>
+  <Contents>
+    <Layer>
+      <ows:Title>Wellington Elevation 1m DEM HS Base Map</ows:Title>
+      <ows:Abstract></ows:Abstract>
+     <ows:Abstract/>
+<ows:WGS84BoundingBox>
+<ows:LowerCorner>-180.0 -85.0511287798</ows:LowerCorner>
+<ows:UpperCorner>180.0 85.0511287798</ows:UpperCorner>
+</ows:WGS84BoundingBox>
+<ows:Identifier>wellyDEM-lidar</ows:Identifier>
+<Style>
+<ows:Identifier>default</ows:Identifier>
+</Style>
+<Format>image/png</Format>
+<TileMatrixSetLink>
+<TileMatrixSet>wellyDEM-lidar</TileMatrixSet>
+</TileMatrixSetLink>
+      <ResourceURL format="image/png" resourceType="tile"
+template="https://xycarto-base-maps.s3-ap-southeast-2.amazonaws.com/wellyDEM-lidar/tile-cache/2020101712/{TileMatrixSet}/{TileMatrix}/{TileCol}/{TileRow}.png"/>
+    </Layer>
+    <TileMatrixSet>
+      <ows:Identifier>wellyDEM-lidar<</ows:Identifier>
+      <ows:SupportedCRS>EPSG:2193</ows:SupportedCRS>
+<TileMatrix>
+<ows:Identifier>0</ows:Identifier>
+<ScaleDenominator>32000000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>2</MatrixWidth>
+<MatrixHeight>4</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>1</ows:Identifier>
+<ScaleDenominator>16000000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>4</MatrixWidth>
+<MatrixHeight>7</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>2</ows:Identifier>
+<ScaleDenominator>8000000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>8</MatrixWidth>
+<MatrixHeight>13</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>3</ows:Identifier>
+<ScaleDenominator>4000000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>16</MatrixWidth>
+<MatrixHeight>25</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>4</ows:Identifier>
+<ScaleDenominator>2000000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>31</MatrixWidth>
+<MatrixHeight>49</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>5</ows:Identifier>
+<ScaleDenominator>1000000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>61</MatrixWidth>
+<MatrixHeight>97</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>6</ows:Identifier>
+<ScaleDenominator>500000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>121</MatrixWidth>
+<MatrixHeight>193</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>7</ows:Identifier>
+<ScaleDenominator>250000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>242</MatrixWidth>
+<MatrixHeight>386</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>8</ows:Identifier>
+<ScaleDenominator>100000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>604</MatrixWidth>
+<MatrixHeight>965</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>9</ows:Identifier>
+<ScaleDenominator>50000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>1208</MatrixWidth>
+<MatrixHeight>1929</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>10</ows:Identifier>
+<ScaleDenominator>25000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>2415</MatrixWidth>
+<MatrixHeight>3858</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>11</ows:Identifier>
+<ScaleDenominator>10000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>6037</MatrixWidth>
+<MatrixHeight>9645</MatrixHeight>
+</TileMatrix>
+<TileMatrix>
+<ows:Identifier>12</ows:Identifier>
+<ScaleDenominator>5000.0</ScaleDenominator>
+<TopLeftCorner>10000000.0 -1000000.0</TopLeftCorner>
+<TileWidth>256</TileWidth>
+<TileHeight>256</TileHeight>
+<MatrixWidth>12074</MatrixWidth>
+<MatrixHeight>19289</MatrixHeight>
+</TileMatrix>
+  </Contents>
+  <ServiceMetadataURL xlink:href="https://xycarto.github.io/elevation.viewer.test/wellycontour_simple/WMTS/WMTSCapabilities.xml"/>
+</Capabilities>
